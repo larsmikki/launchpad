@@ -52,7 +52,10 @@ export default React.memo(function GroupBox({
   const [hovered, setHovered] = useState(false)
   const [dropEndActive, setDropEndActive] = useState(false)
   const [dragOverId, setDragOverId] = useState<number | 'end' | null>(null)
-  const groupBg = theme.groupColors[groupIndex % theme.groupColors.length]
+  const themeGroupBg = theme.groupColors[groupIndex % theme.groupColors.length]
+  const groupBg = group.color && group.color !== '#e0e7ff'
+    ? group.color
+    : themeGroupBg
 
   const handleMouseEnter = useCallback(() => setHovered(true), [])
   const handleMouseLeave = useCallback(() => setHovered(false), [])
