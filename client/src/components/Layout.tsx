@@ -45,7 +45,7 @@ export default function Layout() {
           borderBottom: `1px solid ${theme.border}`,
         }}
       >
-        <div className="w-full px-5 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2.5" style={{ textDecoration: 'none' }}>
             <LaunchpadLogoMark />
             <span className="text-xl font-extrabold tracking-tight gradient-text select-none">
